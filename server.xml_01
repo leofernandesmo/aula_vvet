@@ -1,0 +1,16 @@
+<?xml version=’1.0’ encoding=’utf-8’?>
+<Server port="8005" shutdown="SHUTDOWN">
+...
+<Service name="Catalina">
+...
+<!-- Define a SSL HTTP/1.1 Connector on port 8443
+This connector uses the JSSE configuration, when using APR, the
+connector should be using the OpenSSL style configuration
+described in the APR documentation -->
+<Connector port="8443" protocol="HTTP/1.1" SSLEnabled="true"
+maxThreads="150" scheme="https" secure="true"
+keystoreFile="conf/.keystore" keystorePass="secret"
+clientAuth="false" sslProtocol="SSLv3" />
+...
+</Service>
+</Server>
