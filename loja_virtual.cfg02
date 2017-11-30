@@ -1,0 +1,8 @@
+#adicionar no final do arquivo
+
+define service {
+service_description MySQL
+  use generic-service
+  hostgroup_name db-servers
+  check_command check_tcp!3306
+}
